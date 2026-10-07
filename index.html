@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>DEV'S REDDY</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malik Dubai</title>
 
-<!-- META PIXEL -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,248 +15,167 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','1153714410071909');
-fbq('track','PageView');
+fbq('init', '27588513057477226');
+fbq('track', 'PageView');
 </script>
 
 <style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
 
 body{
-font-family:Arial;
-background:#0b0f19;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
+background:#000;
+color:#fff;
 min-height:100vh;
+overflow-x:hidden;
+display:flex;
+justify-content:center;
 }
 
-/* MAIN CARD */
-
-.container{
-width:380px;
-background:#111827;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
-}
-
-/* HEADER */
-
-.header{
-background:linear-gradient(135deg,#6a5cff,#ff3cac);
-padding:30px;
+.main{
+width:100%;
+max-width:420px;
+padding:30px 16px 50px;
+position:relative;
+z-index:2;
 text-align:center;
 }
 
-.profile{
-width:110px;
-height:110px;
-border-radius:20px;
+/* rain lines */
+.rain{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:1;
+background:
+linear-gradient(transparent 0%,rgba(255,255,255,.12) 50%,transparent 100%);
+background-size:2px 120px;
+animation:rain 0.6s linear infinite;
+opacity:.35;
+}
+@keyframes rain{
+from{background-position:0 0;}
+to{background-position:0 120px;}
+}
+
+/* logo */
+.logo{
+width:160px;
+height:160px;
+border-radius:18px;
 object-fit:cover;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-8px);}
-100%{transform:translateY(0px);}
-}
-
-.name{
-font-size:28px;
-font-weight:bold;
-margin-top:15px;
-}
-
-/* BADGES */
-
-.badges{
-margin-top:12px;
-}
-
-.badge{
-display:inline-block;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
-margin:5px;
-}
-
-.premium{
-background:#8b5cf6;
-}
-
-.live{
-background:#22c55e;
-}
-
-/* MEMBERS */
-
-.members{
-margin-top:10px;
-font-size:15px;
-}
-
-/* STATS */
-
-.stats{
-display:flex;
-gap:12px;
-padding:20px;
-}
-
-.card{
-flex:1;
-padding:20px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
-}
-
-.win{
-background:linear-gradient(45deg,#22c55e,#16a34a);
-}
-
-.rating{
-background:linear-gradient(45deg,#f97316,#fb923c);
-}
-
-/* TELEGRAM BUTTON */
-
-.telegram{
-margin:0 20px 20px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:16px;
-border-radius:15px;
-background:linear-gradient(90deg,#6366f1,#a855f7);
-color:white;
-font-weight:bold;
-text-decoration:none;
-font-size:16px;
-}
-
-.telegram img{
-width:20px;
-}
-
-/* FEATURES */
-
-.features{
-display:flex;
-justify-content:space-around;
-padding:20px;
-text-align:center;
-}
-
-.feature{
-font-size:13px;
-}
-
-.icon{
-width:45px;
-height:45px;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
+box-shadow:0 0 25px rgba(180,120,255,.6);
 margin:auto;
-margin-bottom:6px;
-font-size:20px;
+display:block;
 }
 
-.v{background:#22c55e;}
-.s{background:#3b82f6;}
-.p{background:#ec4899;}
-.t{background:#f59e0b;}
+/* title */
+.title{
+margin-top:18px;
+font-size:32px;
+font-weight:900;
+letter-spacing:2px;
+color:#ffd978;
+text-shadow:0 0 18px #ffcc55;
+}
 
-/* FOOTER */
+.sub{
+margin-top:8px;
+font-size:15px;
+color:#ffd978;
+letter-spacing:1px;
+}
+
+.join-now{
+margin:12px 0 22px;
+font-size:16px;
+color:#fff;
+}
+
+/* big button */
+.join-btn{
+display:inline-block;
+margin-top:10px;
+padding:15px 26px;
+border-radius:30px;
+background:linear-gradient(90deg,#ffe28a,#ffc94d);
+color:#000;
+font-weight:900;
+text-decoration:none;
+box-shadow:0 0 25px #ffd86b;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 10px #ffd86b;}
+50%{box-shadow:0 0 35px #ffd86b;}
+100%{box-shadow:0 0 10px #ffd86b;}
+}
+
+/* glass card */
+.card{
+margin-top:30px;
+background:rgba(255,255,255,.08);
+border-radius:22px;
+padding:22px 18px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 30px rgba(255,255,255,.08);
+}
+
+.card p{
+font-size:16px;
+margin:14px 0;
+letter-spacing:.5px;
+}
+
+.card span{
+color:#ffd978;
+font-weight:bold;
+}
 
 .footer{
-text-align:center;
-padding:15px;
-font-size:13px;
-color:#9ca3af;
+margin-top:24px;
+font-size:12px;
+color:#aaa;
 }
 
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="rain"></div>
 
-<div class="header">
+<div class="main">
 
-<img class="profile" src="logo.png">
+<!-- yaha apni image ka naam dalna -->
+<img src="logo.png" class="logo">
 
-<div class="name">MALIK DUBAI</div>
+<div class="title">DEV'S REDDY</div>
 
-<div class="badges">
-<span class="badge premium">⭐ Premium Analyst</span>
-<span class="badge live">🔴 Live Updates</span>
-</div>
+<div class="sub">INDIA'S BEST COLOR TRADING TIPPER 🔥</div>
 
-<div class="members">👥 100k+ Active Members</div>
+<div class="join-now">🔥 JOIN TELEGRAM NOW 🔥</div>
 
-</div>
-
-<div class="stats">
-
-<div class="card win">
-96%<br>WIN RATE
-</div>
-
-<div class="card rating">
-4.1 ⭐<br>RATING
-</div>
-
-</div>
-
-<a class="telegram" href="https://t.me/">
-
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
-
-Join Telegram Channel
-
+<a class="join-btn"https://t.me/+NpPWS6c4VFowZjM1" target="_blank">
+🚀 JOIN TELEGRAM FREE
 </a>
 
-<div class="features">
+<div class="card">
 
-<div class="feature">
-<div class="icon v">✔</div>
-Verified
-</div>
+<p>🔥 <span>RECOVERY ALL LOSS IN 1 DAYS</span></p>
 
-<div class="feature">
-<div class="icon s">🔒</div>
-Secure
-</div>
+<p>✨ <span>F99% ACCOUNT PREDICTION</span></p>
 
-<div class="feature">
-<div class="icon p">📈</div>
-Profitable
-</div>
+<p>✨ <span>DALL NUMBER HACK FREE</span> ✨</p>
 
-<div class="feature">
-<div class="icon t">⭐</div>
-Top Rated
-</div>
+<p>✨ <span>F100% PERSONAL LOSS RECOVERY</span> ✨</p>
 
 </div>
 
 <div class="footer">
-© 2026 Malik Dubai - All rights reserved.
+© 2025 DEV'S REDDY • Telegram Community
 </div>
 
 </div>
